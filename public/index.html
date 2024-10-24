@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediasoup Video Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        video {
+            width: 300px;
+            height: auto;
+            border: 2px solid #333;
+            margin: 10px;
+        }
+        #controls {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mediasoup Video Chat</h1>
+    <input type="text" id="room-id" placeholder="Room ID" />
+    <input type="text" id="username" placeholder="Your Name" />
+    <button id="join-room">Join Room</button>
+
+    <div id="videos"></div>
+    <div id="controls">
+        <button id="start-audio">Start Audio</button>
+        <button id="stop-audio">Stop Audio</button>
+        <button id="start-video">Start Video</button>
+        <button id="stop-video">Stop Video</button>
+    </div>
+
+    <!-- Include Socket.IO -->
+    <script src="https://cdn.jsdelivr.net/npm/mediasoup-client@3.7.17/lib/index.min.js"></script>
+    <script type="module" src="https://cdn.socket.io/4.4.1/socket.io.esm.min.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
